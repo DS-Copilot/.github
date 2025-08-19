@@ -1,0 +1,58 @@
+name: Change Request
+description: Template for documenting changes and deployments
+title: "[Change]: "
+labels: [release]
+body:
+  - type: textarea
+    id: change-summary
+    attributes:
+      label: Change Summary
+      description: Briefly summarize what this change does.
+      placeholder: Describe the change...
+    validations:
+      required: true
+
+  - type: textarea
+    id: deployment-procedure
+    attributes:
+      label: Deployment Procedure
+      description: Step-by-step deployment instructions.
+      placeholder: e.g. Run scripts, update configs, notify stakeholders...
+    validations:
+      required: true
+
+  - type: textarea
+    id: verification-procedure
+    attributes:
+      label: Verification Procedure
+      description: How will you verify the change works as expected?
+      placeholder: e.g. Check logs, validate endpoints, run smoke tests...
+    validations:
+      required: true
+
+  - type: textarea
+    id: recovery-procedure
+    attributes:
+      label: Recovery Procedure
+      description: What steps should be taken if the change fails?
+      placeholder: e.g. Rollback steps, database restore, feature flag disable...
+    validations:
+      required: true
+
+  - type: textarea
+    id: impact-details
+    attributes:
+      label: Impact Details
+      description: What teams, systems, or users are impacted by this change?
+      placeholder: e.g. Service downtime, performance degradation, user-facing impact...
+    validations:
+      required: true
+
+  - type: textarea
+    id: associated-pbis
+    attributes:
+      label: Associated PBIs
+      description: List related Product Backlog Items or Jira issues.
+      placeholder: e.g. JIRA-123, JIRA-456
+    validations:
+      required: false
